@@ -13,6 +13,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/SEP2_Maven/pom.xml" />
+        <option value="$PROJECT_DIR$/Project/pom.xml" />
       </list>
     </option>
   </component>

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ExamGo</groupId>
-    <artifactId>SEP2_Maven</artifactId>
+    <artifactId>Project</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>SEP2_Maven</name>
 
