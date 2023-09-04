@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="1029.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.examgo.client.view.SMainMenuViewController">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="145.0" prefWidth="1029.0">
+            <children>
+                <VBox maxHeight="-Infinity" prefHeight="76.0" prefWidth="782.0">
+                    <children>
+                        <Label fx:id="studentName" prefHeight="51.0" prefWidth="769.0" text="STUDENT_NAME">
+                            <font>
+                                <Font name="System Bold" size="35.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="className" prefHeight="25.0" prefWidth="1003.0" text="CLASS_NAME">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <HBox.margin>
+                        <Insets left="25.0" />
+                    </HBox.margin>
+                </VBox>
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/via_logo.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </HBox>
+        <HBox prefHeight="461.0" prefWidth="1029.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="461.0" prefWidth="255.0">
+                    <children>
+                        <Label text="Session ID:">
+                            <font>
+                                <Font name="System Bold" size="17.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="-80.0" />
+                            </VBox.margin>
+                        </Label>
+                        <TextField fx:id="sessionInput" maxWidth="-Infinity" prefHeight="25.0" prefWidth="191.0" />
+                        <Button fx:id="connectButton" mnemonicParsing="false" onAction="#connectButtonPressed" prefHeight="25.0" prefWidth="105.0" text="Connect">
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox prefHeight="461.0" prefWidth="774.0">
+                    <children>
+                        <TableView fx:id="sessionTable" prefHeight="462.0" prefWidth="726.0">
+                            <columns>
+                                <TableColumn fx:id="sessionIDColumn" prefWidth="104.0" text="SESSION ID" />
+                                <TableColumn fx:id="testSubjectColumn" minWidth="0.0" prefWidth="579.0" text="TEST SUBJECT" />
+                                <TableColumn fx:id="gradeColumn" prefWidth="90.0" text="GRADE" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>

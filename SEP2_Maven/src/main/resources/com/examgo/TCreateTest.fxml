@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="683.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.examgo.client.view.TCreateTestViewController">
+    <children>
+        <VBox fx:id="scene1" alignment="TOP_CENTER" prefHeight="683.0" prefWidth="341.0">
+            <children>
+                <Label text="STEP 1: Add a title">
+                    <VBox.margin>
+                        <Insets bottom="230.0" top="20.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="33.0" />
+                    </font>
+                </Label>
+                <Label text="Test subject (title):">
+                    <VBox.margin>
+                        <Insets bottom="15.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="subjectField" maxWidth="-Infinity" prefHeight="25.0" prefWidth="268.0" />
+                <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#confirmSubjectPressed" text="Confirm subject">
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="cancelButton1" mnemonicParsing="false" onAction="#cancelButtonPressed" text="Cancel and return to main menu">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Label text="You can always change the title after creating the test">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+            </children>
+        </VBox>
+        <VBox fx:id="scene2" alignment="TOP_CENTER" disable="true" prefHeight="683.0" prefWidth="454.0">
+            <children>
+                <Label text="STEP 2: Add questions">
+                    <font>
+                        <Font name="System Bold" size="33.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="100.0" top="20.0" />
+                    </VBox.margin>
+                </Label>
+                <Label text="Question content:">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <TextArea fx:id="questionContentField" prefHeight="200.0" prefWidth="442.0" />
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="453.0">
+                    <children>
+                        <Label text="Time limit for answering: " />
+                        <TextField fx:id="timeField" prefHeight="25.0" prefWidth="59.0" />
+                        <Label text="seconds">
+                            <HBox.margin>
+                                <Insets left="5.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="50.0" prefWidth="453.0">
+                    <children>
+                        <Label text="Points for right answer: " />
+                        <TextField fx:id="pointsField" prefHeight="25.0" prefWidth="59.0" />
+                    </children>
+                </HBox>
+                <Button fx:id="addQuestionButton" mnemonicParsing="false" onAction="#addQuestionPressed" text="Add a question" />
+                <Label text="You can always edit the questions after creating the test">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <Button fx:id="confirmQuestionsButton" mnemonicParsing="false" onAction="#confirmQuestionsPressed" text="Confirm the questions">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="cancelButton2" mnemonicParsing="false" onAction="#cancelButtonPressed" text="Cancel and return to main menu">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+        <VBox fx:id="scene3" alignment="TOP_CENTER" disable="true" prefHeight="683.0" prefWidth="288.0">
+            <children>
+                <Label text="STEP 3:">
+                    <font>
+                        <Font name="System Bold" size="33.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </Label>
+                <Label text="Confirm">
+                    <font>
+                        <Font name="System Bold" size="33.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="150.0" />
+                    </VBox.margin>
+                </Label>
+                <Button fx:id="confirmTestButton" mnemonicParsing="false" onAction="#confirmTestPressed" text="Confirm the test">
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="cancelButton3" mnemonicParsing="false" onAction="#cancelButtonPressed" text="Cancel and return to main menu">
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+    </children>
+</HBox>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="1029.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.examgo.client.view.AMainMenuViewController">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="126.0" prefWidth="1029.0">
+            <children>
+                <VBox maxHeight="-Infinity" prefHeight="76.0" prefWidth="782.0">
+                    <children>
+                        <Label fx:id="administratorName" prefHeight="51.0" prefWidth="769.0" text="ADMINISTRATOR_NAME">
+                            <font>
+                                <Font name="System Bold" size="35.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="className" prefHeight="25.0" prefWidth="1003.0" text="ADMINISTRATOR">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <HBox.margin>
+                        <Insets left="25.0" />
+                    </HBox.margin>
+                </VBox>
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/via_logo.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </HBox>
+        <HBox prefHeight="461.0" prefWidth="1029.0">
+            <children>
+                <VBox prefHeight="456.0" prefWidth="1029.0">
+                    <children>
+                        <TabPane prefHeight="456.0" prefWidth="774.0" tabClosingPolicy="UNAVAILABLE">
+                            <tabs>
+                                <Tab text="Tests">
+                                    <content>
+                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                            <children>
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="1029.0">
+                                                    <children>
+                                                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="823.0">
+                                                            <children>
+                                                                <Label prefHeight="19.0" prefWidth="147.0" text="Search by ID or Subject:">
+                                                                    <font>
+                                                                        <Font size="13.0" />
+                                                                    </font>
+                                                                    <HBox.margin>
+                                                                        <Insets left="10.0" />
+                                                                    </HBox.margin>
+                                                                </Label>
+                                                                <TextField fx:id="testSearchField" prefHeight="25.0" prefWidth="326.0" promptText="Leave empty and press &quot;Search&quot; button to get everything" />
+                                                                <Button fx:id="testSearchButton" mnemonicParsing="false" onAction="#testSearchButtonPressed" prefHeight="25.0" prefWidth="64.0" text="Search">
+                                                                    <HBox.margin>
+                                                                        <Insets left="15.0" />
+                                                                    </HBox.margin>
+                                                                </Button>
+                                                            </children>
+                                                        </HBox>
+                                                        <Button fx:id="createSession" disable="true" mnemonicParsing="false" onAction="#createSessionPressed" prefHeight="25.0" prefWidth="102.0" text="Create session">
+                                                            <HBox.margin>
+                                                                <Insets right="10.0" />
+                                                            </HBox.margin>
+                                                        </Button>
+                                                        <Button fx:id="deleteTest" disable="true" mnemonicParsing="false" onAction="#deleteTestPressed" prefHeight="25.0" prefWidth="111.0" text="Delete the test">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin></Button>
+                                                    </children>
+                                                </HBox>
+                                                <TableView fx:id="testsTable" prefHeight="383.0" prefWidth="1029.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="testIDColumn" prefWidth="121.0" text="Test ID" />
+                                                        <TableColumn fx:id="subjectColumn" prefWidth="906.0" text="Subject" />
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </VBox>
+                                    </content>
+                                </Tab>
+                                <Tab text="Sessions">
+                                    <content>
+                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                            <children>
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="1029.0">
+                                                    <children>
+                                                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="922.0">
+                                                            <children>
+                                                                <Label prefHeight="19.0" prefWidth="129.0" text="Search by Session ID:">
+                                                                    <font>
+                                                                        <Font size="13.0" />
+                                                                    </font>
+                                                                    <HBox.margin>
+                                                                        <Insets left="10.0" right="5.0" />
+                                                                    </HBox.margin>
+                                                                </Label>
+                                                                <TextField fx:id="searchSessionField" prefHeight="25.0" prefWidth="321.0" promptText="Leave empty and press &quot;Search&quot; button to get everything" />
+                                                                <Button fx:id="searchTestButton" mnemonicParsing="false" onAction="#sessionSearchButtonPressed" prefHeight="25.0" prefWidth="103.0" text="Search">
+                                                                    <HBox.margin>
+                                                                        <Insets left="15.0" />
+                                                                    </HBox.margin>
+                                                                </Button>
+                                                            </children>
+                                                        </HBox>
+                                                        <Button fx:id="stopSession" disable="true" mnemonicParsing="false" onAction="#stopSessionPressed" prefHeight="25.0" prefWidth="94.0" text="Stop Session">
+                                                            <HBox.margin>
+                                                                <Insets left="15.0" right="15.0" />
+                                                            </HBox.margin>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                                <TableView fx:id="sessionsTable" prefHeight="382.0" prefWidth="1029.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="sessionIDColumn" prefWidth="513.0" text="Session ID" />
+                                                        <TableColumn fx:id="activeColumn" prefWidth="515.0" text="Active" />
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </VBox>
+                                    </content>
+                                </Tab>
+                                <Tab text="Classes">
+                                    <content>
+                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                            <children>
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="834.0">
+                                                    <children>
+                                                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="770.0">
+                                                            <children>
+                                                                <Label prefHeight="19.0" prefWidth="134.0" text="Search by Class Name:">
+                                                                    <font>
+                                                                        <Font size="13.0" />
+                                                                    </font>
+                                                                    <HBox.margin>
+                                                                        <Insets left="10.0" right="5.0" />
+                                                                    </HBox.margin>
+                                                                </Label>
+                                                                <TextField fx:id="searchClassField" prefHeight="25.0" prefWidth="325.0" promptText="Leave empty and press &quot;Search&quot; button to get everything" />
+                                                                <Button fx:id="searchClassButton" mnemonicParsing="false" onAction="#classSearchButtonPressed" prefHeight="25.0" prefWidth="103.0" text="Search">
+                                                                    <HBox.margin>
+                                                                        <Insets left="15.0" />
+                                                                    </HBox.margin>
+                                                                </Button>
+                                                            </children>
+                                                        </HBox>
+                                          <Button fx:id="createClass" mnemonicParsing="false" onAction="#createClassPressed" text="Create Class">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="editClass" disable="true" mnemonicParsing="false" onAction="#editClassPressed" text="Edit Class">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="deleteClass" disable="true" mnemonicParsing="false" onAction="#deleteClassPressed" text="Delete Class">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                                    </children>
+                                                </HBox>
+                                                <TableView fx:id="classesTable" prefHeight="382.0" prefWidth="1029.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="classNameColumn" prefWidth="1028.0" text="Class Name" />
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </VBox>
+                                    </content>
+                                </Tab>
+                                <Tab text="Students">
+                                    <content>
+                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                            <children>
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="834.0">
+                                                    <children>
+                                                        <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="729.0">
+                                                            <children>
+                                                                <Label prefHeight="19.0" prefWidth="269.0" text="Search by Student ID, First name or last name:">
+                                                                    <font>
+                                                                        <Font size="13.0" />
+                                                                    </font>
+                                                                    <HBox.margin>
+                                                                        <Insets left="10.0" right="5.0" />
+                                                                    </HBox.margin>
+                                                                </Label>
+                                                                <TextField fx:id="searchStudentField" prefHeight="25.0" prefWidth="301.0" promptText="Leave empty and press &quot;Search&quot; button to get everything" />
+                                                                <Button fx:id="searchStudentButton" mnemonicParsing="false" onAction="#studentSearchButtonPressed" prefHeight="25.0" prefWidth="103.0" text="Search">
+                                                                    <HBox.margin>
+                                                                        <Insets left="15.0" />
+                                                                    </HBox.margin>
+                                                                </Button>
+                                                            </children>
+                                                        </HBox>
+                                          <Button fx:id="addStudent" mnemonicParsing="false" onAction="#addStudentPressed" prefHeight="25.0" prefWidth="105.0" text="Add Student(s)">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="editStudent" disable="true" mnemonicParsing="false" onAction="#editStudentPressed" prefHeight="25.0" prefWidth="89.0" text="Edit Student">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="deleteStudent" disable="true" mnemonicParsing="false" onAction="#deleteStudentPressed" prefHeight="25.0" prefWidth="104.0" text="Delete Student">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                                    </children>
+                                                </HBox>
+                                                <TableView fx:id="studentsTable" prefHeight="382.0" prefWidth="1029.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="studentIDColumn" prefWidth="130.0" text="Student ID" />
+                                                        <TableColumn fx:id="firstNameColumn" prefWidth="402.0" text="First Name" />
+                                          <TableColumn fx:id="lastNameColumn" minWidth="2.0" prefWidth="495.0" text="Last Name" />
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </VBox>
+                                    </content>
+                                </Tab>
+                        <Tab text="Teachers">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="834.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="729.0">
+                                             <children>
+                                                <Label prefHeight="19.0" prefWidth="277.0" text="Search by Teacher ID, First name or Last name:">
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" right="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="searchTeacherField" prefHeight="25.0" prefWidth="275.0" promptText="Leave empty and press &quot;Search&quot; button to get everything" />
+                                                <Button fx:id="searchTeacherButton" mnemonicParsing="false" onAction="#teacherSearchButtonPressed" prefHeight="25.0" prefWidth="103.0" text="Search">
+                                                   <HBox.margin>
+                                                      <Insets left="15.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="addTeacher" mnemonicParsing="false" onAction="#addTeacherPressed" prefHeight="25.0" prefWidth="111.0" text="Add Teacher(s)">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="editTeacher" disable="true" mnemonicParsing="false" onAction="#editTeacherPressed" text="Edit Teacher">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button fx:id="deleteTeacher" disable="true" mnemonicParsing="false" onAction="#deleteTeacherPressed" text="Delete Teacher">
+                                             <HBox.margin>
+                                                <Insets right="10.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <TableView fx:id="teachersTable" prefHeight="382.0" prefWidth="1029.0">
+                                       <columns>
+                                          <TableColumn fx:id="teacherIDColumn" prefWidth="130.0" text="Teacher ID" />
+                                          <TableColumn fx:id="firstNameColumnT" prefWidth="447.0" text="First Name" />
+                                          <TableColumn fx:id="lastNameColumnT" prefWidth="451.0" text="Last Name" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </Tab>
+                            </tabs>
+                        </TabPane>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>

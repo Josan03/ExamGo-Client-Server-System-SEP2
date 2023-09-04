@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="867.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.examgo.client.view.TEditTestViewController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="565.0" prefWidth="867.0">
+         <children>
+            <Label text="Edit the test">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Test subject:">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="-10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="testSubject" alignment="CENTER" maxWidth="-Infinity" prefHeight="25.0" prefWidth="389.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Questions list:">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="questionList" prefHeight="25.0" prefWidth="709.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <CheckBox fx:id="addQuestionMode" mnemonicParsing="false" onAction="#addQuestionChanged" text="Turn ON / OFF MODE - Add a question ">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </CheckBox>
+            <Label text="Question content:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="questionContentField" prefHeight="249.0" prefWidth="867.0" />
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="453.0">
+               <children>
+                  <Label text="Time limit for answering: " />
+                  <TextField fx:id="timeField" prefHeight="25.0" prefWidth="59.0" />
+                  <Label text="seconds">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="453.0">
+               <children>
+                  <Label text="Points for right answer: ">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin></Label>
+                  <TextField fx:id="pointsField" prefHeight="25.0" prefWidth="59.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="addQuestion" disable="true" mnemonicParsing="false" onAction="#addQuestionPressed" text="Add question">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="deleteQuestion" mnemonicParsing="false" onAction="#deleteQuestionPressed" text="Delete Question">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="confimChanges" mnemonicParsing="false" onAction="#confirmChangesPressed" text="Confirm the changes" />
+               </children>
+            </HBox>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancelButtonPressed" text="Return to main menu">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</VBox>
